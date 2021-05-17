@@ -1,6 +1,6 @@
 import { getActionFromState } from '@react-navigation/core'
 import React from 'react'
-import { View, Text, FlatList, Alert } from 'react-native'
+import { View, FlatList, Alert } from 'react-native'
 import { ListItem, Button, Icon } from 'react-native-elements'
 import { Avatar } from 'react-native-elements/dist/avatar/Avatar'
 import users from '../data/users'

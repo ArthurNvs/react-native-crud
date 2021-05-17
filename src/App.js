@@ -17,7 +17,7 @@ export default  props => {
                     component={UserList}
                     options={({ navigation }) => {
                         return {
-                            title: "Users List",
+                            title: "Usuários",
                             headerRight: () => (
                                 <Button 
                                     onPress={() => navigation.navigate("UserForm")}
@@ -30,7 +30,7 @@ export default  props => {
                     name="UserForm"
                     component={UserForm}
                     options={{
-                        title: "Users Form"
+                        title: "Formulário"
                     }} />
             </Stack.Navigator>
         </NavigationContainer>
