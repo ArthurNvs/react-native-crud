@@ -1,15 +1,18 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { StyleSheet, SafeAreaView } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import UserList from './views/UserList'
 import UserForm from './views/UserForm'
 import { Button, Icon } from 'react-native-elements'
+import { UsersProvider } from './context/UsersContext'
 
 const Stack = createStackNavigator()
 
-export default  props => {
+export default props => {
     return(
+        <UsersProvider>
+        <SafeAreaView style={styles.container}>
         <NavigationContainer>
             <Stack.Navigator initialRouteName="UserList"  screenOptions={screenOptions}>
                 <Stack.Screen
@@ -34,6 +37,8 @@ export default  props => {
                     }} />
             </Stack.Navigator>
         </NavigationContainer>
+        </SafeAreaView>
+        </UsersProvider>
     )
 }
 
@@ -48,3 +53,10 @@ const screenOptions  = {
         fontWeight: 'bold',
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex:1,
+        backgroundColor: '#ac85ff'
+    }
+})
