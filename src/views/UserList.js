@@ -20,7 +20,7 @@ export default  props => {
             { text: 'Não'}
         ])
     }
-
+    
     function getUserItem({ item }) {
         return (
             <ListItem 
